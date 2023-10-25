@@ -1,0 +1,68 @@
+﻿<Window x:Class="wpfTry.Viev.EditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:controls="clr-namespace:WpfMath.Controls;assembly=WpfMath"
+        xmlns:local="clr-namespace:wpfTry.Viev"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        mc:Ignorable="d"
+        Title="EditWindow" Height="870" Width="696" ResizeMode="NoResize">
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding WindowLoaded}"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+    <Grid>
+        <Label Content="Продукт" HorizontalAlignment="Left" Margin="287,25,0,0" VerticalAlignment="Top"/>
+        <Label Content="Название" HorizontalAlignment="Left" Margin="27,60,0,0" VerticalAlignment="Top"/>
+        <Label Content="Тип" HorizontalAlignment="Left" Margin="42,92,0,0" VerticalAlignment="Top"/>
+        <Label Content="Цвет" HorizontalAlignment="Left" Margin="39,122,0,0" VerticalAlignment="Top"/>
+        <Label Content="Теплоустойчивость" HorizontalAlignment="Left" Margin="0,153,0,0" VerticalAlignment="Top"/>
+        <Label Content="Длинна" HorizontalAlignment="Left" Margin="400,60,0,0" VerticalAlignment="Top"/>
+        <Label Content="Ширина" HorizontalAlignment="Left" Margin="398,92,0,0" VerticalAlignment="Top"/>
+        <Label Content="Высота" HorizontalAlignment="Left" Margin="400,122,0,0" VerticalAlignment="Top"/>
+        <Label Content="Ссылка на изображение" HorizontalAlignment="Left" Margin="352,196,0,0" VerticalAlignment="Top"/>
+        <Label Content="Объём" HorizontalAlignment="Left" Margin="401,156,0,0" VerticalAlignment="Top"/>
+        <Label Content="Производитель" HorizontalAlignment="Left" Margin="11,188,0,0" VerticalAlignment="Top"/>
+        <Label Content="{Binding ProductId}" HorizontalAlignment="Left" Margin="348,33,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="129,65,0,0" TextWrapping="Wrap" Text="{Binding ProductName}" VerticalAlignment="Top" Width="120"/>
+        <ComboBox HorizontalAlignment="Left" Margin="129,99,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="129,130,0,0" TextWrapping="Wrap" Text="{Binding ProductColor}" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="129,160,0,676" TextWrapping="Wrap" Text="{Binding ProductHeatResistance  }" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="129,196,0,0" TextWrapping="Wrap" Text="{Binding ProductManufacturer  }" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Файл" HorizontalAlignment="Left" Margin="510,201,0,0" VerticalAlignment="Top" Width="100" Command="{Binding OpenImg}"/>
+        <TextBox HorizontalAlignment="Left" Margin="500,65,0,0" TextWrapping="Wrap" Text="{Binding ProductWidth  }" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
+        <TextBox HorizontalAlignment="Left" Margin="500,99,0,0" TextWrapping="Wrap" Text="{Binding ProductHeight  }" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
+        <TextBox HorizontalAlignment="Left" Margin="500,130,0,0" TextWrapping="Wrap" Text="{Binding ProductLength  }" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
+        <TextBox HorizontalAlignment="Left" Margin="500,160,0,0" TextWrapping="Wrap" Text="{Binding ProductVolume  }" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
+        <Label Content="М" HorizontalAlignment="Left" Margin="640,61,0,0" VerticalAlignment="Top"/>
+        <Label Content="М" HorizontalAlignment="Left" Margin="640,97,0,0" VerticalAlignment="Top"/>
+        <Label Content="М" HorizontalAlignment="Left" Margin="640,130,0,0" VerticalAlignment="Top"/>
+        <Label Content="M" HorizontalAlignment="Left" Margin="640,161,0,0" VerticalAlignment="Top"/>
+        <Label Content="Описание" HorizontalAlignment="Left" Margin="25,233,0,0" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="35,264,0,0" TextWrapping="Wrap" Text="{Binding ProductDiscription  }" VerticalAlignment="Top" Height="192" Width="626" Grid.ColumnSpan="2"/>
+        <ListBox  Margin="35,522,35,100"
+                  ItemsSource="{Binding CharacteristicList,UpdateSourceTrigger=PropertyChanged}"
+                  >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <UniformGrid Columns="3">
+                        <UniformGrid.Resources>
+                            <Style TargetType="TextBox">
+                                <Setter Property="Margin" Value="2"/>
+                                <Setter Property="TextAlignment" Value="Center"/>
+                            </Style>
+                        </UniformGrid.Resources>
+                        <TextBlock HorizontalAlignment ="Center" Text ="{Binding name}"/>
+                        <TextBlock HorizontalAlignment ="Center" Text ="{Binding content}"/>
+                        <ComboBox HorizontalAlignment="Center" ItemsSource="{Binding 
+                 UOF}" SelectedIndex="{Binding selectedUOF}" />
+                    </UniformGrid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Label Content="Характеристики" HorizontalAlignment="Left" Margin="57,483,0,0" VerticalAlignment="Top"/>
+        <Button Content="Сохранить" HorizontalAlignment="Right" Margin="0,821,11,0" VerticalAlignment="Top" Width="70" Height="25" Grid.Column="1" Command="{Binding SaveData}"/>
+    </Grid>
+</Window>
