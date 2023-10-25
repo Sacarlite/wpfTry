@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bokov\\source\\repos\\wpfTry\\wpfTry.csproj": {}
+    "C:\\Users\\Knyukua\\source\\repos\\wpfTry\\wpfTry.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bokov\\source\\repos\\wpfTry\\wpfTry.csproj": {
+    "C:\\Users\\Knyukua\\source\\repos\\wpfTry\\wpfTry.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bokov\\source\\repos\\wpfTry\\wpfTry.csproj",
+        "projectUniqueName": "C:\\Users\\Knyukua\\source\\repos\\wpfTry\\wpfTry.csproj",
         "projectName": "wpfTry",
-        "projectPath": "C:\\Users\\bokov\\source\\repos\\wpfTry\\wpfTry.csproj",
-        "packagesPath": "C:\\Users\\bokov\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bokov\\source\\repos\\wpfTry\\obj\\",
+        "projectPath": "C:\\Users\\Knyukua\\source\\repos\\wpfTry\\wpfTry.csproj",
+        "packagesPath": "C:\\Users\\Knyukua\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Knyukua\\source\\repos\\wpfTry\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\bokov\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Knyukua\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -88,7 +89,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
